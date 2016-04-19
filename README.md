@@ -19,5 +19,10 @@ has some nice exclusions:
 Here's a test run command:
 
 ```
-docker run --rm --name=backup -d -e TAR_OPTS="--exclude=backup" -e AWS_ACCESS_KEY=access_key -e AWS_SECRET_KEY=secret_key -e AWS_BUCKET="bucket-name" docker-rancher-backup
+docker run --rm --name=backup -d \
+    -e TAR_OPTS="--exclude=backup" \
+    -e AWS_ACCESS_KEY=access_key \
+    -e AWS_SECRET_KEY=secret_key \
+    -e AWS_BUCKET="bucket-name" \
+    docker-rancher-backup
 ```
